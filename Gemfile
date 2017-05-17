@@ -24,6 +24,8 @@ end
 gem 'sass-rails', '~> 5.0'
 # SCSS Bootstrap
 gem "bootstrap-sass"
+#Used for encypting User passwords
+gem "bcrypt"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
