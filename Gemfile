@@ -34,3 +34,5 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+#Figaro used to securely store secure configuration info (API Keys) as environmental variables
+gem "figaro", "1.0"
