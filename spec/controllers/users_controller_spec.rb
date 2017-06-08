@@ -77,4 +77,18 @@ RSpec.describe UsersController, type: :controller do
       expect(assigns(:user)).to eq(factory_user)
     end
   end
+
+  describe "GET show" do
+    let(:factory_user) { create(:user) }
+
+    it "returns http success" do
+      get :show, {id: factory_user.id}
+      expect(response).to have_http_status(:success)
+    end
+
+    it "does not display favorites if there are none" do
+      get :show, {id: factory_user.id}
+      expect(response).not_to render_template(partial: "favorites/all")
+    end
+  end
 end

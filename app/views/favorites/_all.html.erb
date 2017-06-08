@@ -1,0 +1,21 @@
+<% user.favorites.each do |favorite| %>
+ <div class='fav-post'>
+   <div class='col-md-1'>
+     <%= image_tag favorite.post.user.avatar_url(48), class: 'gravatar' %>
+   </div>
+
+   <div class='inline'>
+     <div class="media">
+       <div class="media-body">
+         <h4 class="media-heading">
+           <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
+         </h4>
+         <small>
+           <%= favorite.post.votes.count %> votes <br>
+           <%= favorite.post.comments.count %> Comments
+         </small>
+       </div>
+     </div>
+   </div>
+ </div>
+<% end %>
